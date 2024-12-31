@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/icon.jpg" type="image/jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý hàng hóa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quản lý hàng hóa</h1>
+
+        <!-- Form thêm sản phẩm -->
+        <form id="productForm">
+            <input type="text" id="productName" placeholder="Tên sản phẩm" required />
+            <input type="number" id="productPrice" placeholder="Giá sản phẩm" required />
+            <input type="number" id="productQuantity" placeholder="Số lượng" required />
+            <button type="submit">Thêm sản phẩm</button>
+        </form>
+
+        <!-- Lọc sản phẩm -->
+        <h2>Lọc sản phẩm</h2>
+        <input type="text" id="filterInput" placeholder="Tìm kiếm sản phẩm theo tên" />
+
+        <!-- Danh sách sản phẩm -->
+        <h2>Danh sách sản phẩm</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="productList"></tbody>
+        </table>
+
+        <!-- Danh sách danh mục -->
+        <h2>Danh mục sản phẩm</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên danh mục</th>
+                </tr>
+            </thead>
+            <tbody id="categoryList"></tbody>
+        </table>
+
+        <!-- Danh sách nhà cung cấp -->
+        <h2>Nhà cung cấp</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên nhà cung cấp</th>
+                    <th>Địa chỉ</th>
+                    <th>Số điện thoại</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="supplierList"></tbody>
+        </table>
+
+        <!-- Kho hàng -->
+        <h2>Kho hàng</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Ngày hết hạn</th>
+                    <th>Ngày nhập kho</th>
+                </tr>
+            </thead>
+            <tbody id="warehouseList"></tbody>
+        </table>
+
+        <!-- Lịch sử giao dịch -->
+        <h2>Lịch sử giao dịch</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Ngày</th>
+                    <th>Thành tiền</th>
+                    <th>Khách hàng</th>
+                    <th>Phương thức thanh toán</th>
+                </tr>
+            </thead>
+            <tbody id="salesList"></tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
